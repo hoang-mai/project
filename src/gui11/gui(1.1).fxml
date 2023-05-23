@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.image.Image?>
@@ -24,7 +25,7 @@
       </Pane>
       <Pane layoutX="25.0" layoutY="181.0" prefHeight="479.0" prefWidth="551.0" style="-fx-border-style: DASHED;">
          <children>
-            <VBox fx:id="vbox1" layoutX="45.0" layoutY="14.0" prefHeight="200.0" prefWidth="245.0" spacing="20.0">
+            <VBox fx:id="vbox1" layoutX="45.0" layoutY="14.0" prefHeight="380.0" prefWidth="245.0" spacing="20.0">
                <children>
                   <Label fx:id="kiemtracuoikimonit1" onMouseClicked="#kiemtracuoikimonit" prefHeight="28.0" prefWidth="226.0" text="Kiểm tra cuối kỳ môn IT4895Q">
                      <font>
@@ -46,5 +47,6 @@
          </children>
       </Pane>
       <Pane prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: #104ce8;" />
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
    </children>
 </Pane>

@@ -71,7 +71,8 @@ public class gui51 implements Initializable {
             ag0r1.setScene(scene);
             ag0r1.show();
             gui11 controller = loader.getController();
-       controller.setvob1(namename.getText());
+            savedata.addLabelValue(namename.getText());
+      controller.initialize();
            
         } catch (Exception e) {
        System.out.println(e.getMessage());
