@@ -10,55 +10,55 @@ import javafx.stage.Stage;
 
 public class popup {
 
-    @FXML
-    private Pane popup;
+	@FXML
+	private Pane popup;
 
-    @FXML
-    void categories(ActionEvent event) {
-        try {   
-          
-            Parent root=FXMLLoader.load(getClass().getResource("/gui33/gui(3.3).fxml"));
-            Scene scene=new Scene(root);
-            Stage ag0r=new Stage();
-           ag0r.setScene(scene);
-           ag0r.show();
-           Stage a=(Stage)popup.getScene().getWindow();
-           a.hide();
-        } catch (Exception e) {
-       System.out.println(e.getMessage());
-    }
-    }
+	@FXML
+	void categories(ActionEvent event) {
+		try {
 
-    @FXML
-    void handle1(ActionEvent event) {
-        try {   
-          
-            Parent root=FXMLLoader.load(getClass().getResource("/gui21/gui(2.1).fxml"));
-            Scene scene=new Scene(root);
-            Stage ag0r=new Stage();
-           ag0r.setScene(scene);
-           ag0r.show();
-           Stage a=(Stage)popup.getScene().getWindow();
-           a.hide();
-        } catch (Exception e) {
-       System.out.println(e.getMessage());
-    }
-    }
+			Parent root = FXMLLoader.load(getClass().getResource("/gui33/gui(3.3).fxml"));
+			Scene scene = new Scene(root);
+			Stage ag0r = new Stage();
+			ag0r.setScene(scene);
+			ag0r.show();
+			Stage a = (Stage) popup.getScene().getWindow();
+			a.hide();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 
-    @FXML
-    void import1(ActionEvent event) {
-        try {   
-          
-            Parent root=FXMLLoader.load(getClass().getResource("/gui34/gui(3.4).fxml"));
-            Scene scene=new Scene(root);
-            Stage ag0r=new Stage();
-           ag0r.setScene(scene);
-           ag0r.show();
-           Stage a=(Stage)popup.getScene().getWindow();
-           a.hide();
-        } catch (Exception e) {
-       System.out.println(e.getMessage());
-    }
-    }
+	@FXML
+	void handle1(ActionEvent event) {
+		try {
+
+			Parent root = FXMLLoader.load(getClass().getResource("/gui21/gui(2.1).fxml"));
+			Scene scene = new Scene(root);
+			Stage ag0r = new Stage();
+			ag0r.setScene(scene);
+			ag0r.show();
+			Stage a = (Stage) popup.getScene().getWindow();
+			a.hide();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@FXML
+	void import1(ActionEvent event) {
+		try {
+
+			Parent root = FXMLLoader.load(getClass().getResource("/gui34/gui(3.4).fxml"));
+			Scene scene = new Scene(root);
+			Stage ag0r = new Stage();
+			ag0r.setScene(scene);
+			ag0r.show();
+			Stage a = (Stage) popup.getScene().getWindow();
+			a.hide();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 
 }

@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.control.Alert;
 
-
-
 public class AikenFormatTxt {
 	public static AikenFormatTxt getInstance() {
 		return new AikenFormatTxt();
@@ -35,7 +33,8 @@ public class AikenFormatTxt {
 	}
 
 	/**
-	 * Kiểm tra file .txt có đúng định dạng Aiken format không 
+	 * Kiểm tra file .txt có đúng định dạng Aiken format không
+	 * 
 	 * @param path Đường dẫn tới file .txt cần kiểm tra định dạng
 	 */
 	public void checkFormat(String path) {
@@ -65,10 +64,10 @@ public class AikenFormatTxt {
 						if (keyChoice.contains(checkLine.charAt(8))) {
 							countChoice = -1;
 							numberQuestions++;
-							
+
 							continue;
 						} else {
-							Alert alert=new Alert(Alert.AlertType.ERROR);
+							Alert alert = new Alert(Alert.AlertType.ERROR);
 							alert.setTitle("Error");
 							alert.setHeaderText(null);
 							alert.setContentText("Error at " + (i + 1));
@@ -80,7 +79,7 @@ public class AikenFormatTxt {
 						countChoice = -2;
 						continue;
 					} else {
-						Alert alert=new Alert(Alert.AlertType.ERROR);
+						Alert alert = new Alert(Alert.AlertType.ERROR);
 						alert.setTitle("Error");
 						alert.setHeaderText(null);
 						alert.setContentText("Error at " + (i + 1));
@@ -92,13 +91,13 @@ public class AikenFormatTxt {
 				break;
 			}
 			if (result == 1) {
-				Alert alert=new Alert(Alert.AlertType.INFORMATION);
+				Alert alert = new Alert(Alert.AlertType.INFORMATION);
 				alert.setTitle("Success");
 				alert.setHeaderText(null);
 				alert.setContentText("Success: " + numberQuestions);
 				alert.show();
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
