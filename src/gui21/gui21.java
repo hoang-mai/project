@@ -13,78 +13,81 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 
 public class gui21 {
-  @FXML
-  private AnchorPane anchorpane1;
-  @FXML
-  private ScrollPane scrollpane1;
-    @FXML
-    private CheckBox alsoquestion1;
-    @FXML
-    void Category(ActionEvent event) {
-      try {
-        Stage ag0r1= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root=FXMLLoader.load(getClass().getResource("/gui33/gui(3.3).fxml"));
-        Scene scene=new Scene(root); 
-        ag0r1.setScene(scene);
-        ag0r1.show();
-       
-    } catch (Exception e) {
-   System.out.println(e.getMessage());
-    }
-    }
+	@FXML
+	private AnchorPane anchorpane1;
+	@FXML
+	private ScrollPane scrollpane1;
+	@FXML
+	private CheckBox alsoquestion1;
 
-    @FXML
-    void Import(ActionEvent event) {
-      try {
-        Stage ag0r1= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Parent root=FXMLLoader.load(getClass().getResource("/gui34/gui(3.4).fxml"));
-        Scene scene=new Scene(root); 
-        ag0r1.setScene(scene);
-        ag0r1.show();
-       
-    } catch (Exception e) {
-   System.out.println(e.getMessage());
-    }
-    }
+	@FXML
+	void Category(ActionEvent event) {
+		try {
+			Stage ag0r1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			Parent root = FXMLLoader.load(getClass().getResource("/gui33/gui(3.3).fxml"));
+			Scene scene = new Scene(root);
+			ag0r1.setScene(scene);
+			ag0r1.show();
 
-    @FXML
-    void alsoquestion(ActionEvent event) {
-      if(alsoquestion1.isSelected()){
-       scrollpane1.setVisible(true);
-       anchorpane1.setVisible(true);
-      }
-      else{ scrollpane1.setVisible(false);
-        anchorpane1.setVisible(false);}
-    }
-    @FXML
-    void Edit1(ActionEvent event) {
-      try {
-        Stage ag0r1= (Stage) ((Node) event.getSource()).getScene().getWindow();
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui32/gui(3.2).fxml"));
-        Parent root = loader.load();
-        Scene scene=new Scene(root);
-        ag0r1.setScene(scene);
-        ag0r1.show();
-        gui32 controller = loader.getController();
-        controller.setaddingamultipe("Editing Multiple choice question");
-       
-    } catch (Exception e) {
-   System.out.println(e.getMessage());
-    }
-}
-    
-    @FXML
-    void createquestion(ActionEvent event) {
-        try {
-            Stage ag0r1= (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Parent root=FXMLLoader.load(getClass().getResource("/gui32/gui(3.2).fxml"));
-            Scene scene=new Scene(root); 
-            ag0r1.setScene(scene);
-            ag0r1.show();
-           
-        } catch (Exception e) {
-       System.out.println(e.getMessage());
-        }
-    }
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@FXML
+	void Import(ActionEvent event) {
+		try {
+			Stage ag0r1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			Parent root = FXMLLoader.load(getClass().getResource("/gui34/gui(3.4).fxml"));
+			Scene scene = new Scene(root);
+			ag0r1.setScene(scene);
+			ag0r1.show();
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@FXML
+	void alsoquestion(ActionEvent event) {
+		if (alsoquestion1.isSelected()) {
+			scrollpane1.setVisible(true);
+			anchorpane1.setVisible(true);
+		} else {
+			scrollpane1.setVisible(false);
+			anchorpane1.setVisible(false);
+		}
+	}
+
+	@FXML
+	void Edit1(ActionEvent event) {
+		try {
+			Stage ag0r1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui32/gui(3.2).fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+			ag0r1.setScene(scene);
+			ag0r1.show();
+			gui32 controller = loader.getController();
+			controller.setaddingamultipe("Editing Multiple choice question");
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@FXML
+	void createquestion(ActionEvent event) {
+		try {
+			Stage ag0r1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			Parent root = FXMLLoader.load(getClass().getResource("/gui32/gui(3.2).fxml"));
+			Scene scene = new Scene(root);
+			ag0r1.setScene(scene);
+			ag0r1.show();
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 
 }

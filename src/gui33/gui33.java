@@ -19,55 +19,60 @@ import javafx.scene.Node;
 
 public class gui33 implements Initializable {
 
-    @FXML
-    private ImageView canhbao1;
+	@FXML
+	private ImageView canhbao1;
 
-    @FXML
-    private ImageView chamhoi2;
+	@FXML
+	private ImageView chamhoi2;
 
-    @FXML
-    private TextField idnumber1;
+	@FXML
+	private TextField idnumber1;
 
-    @FXML
-    private TextField name1;
-    @FXML
-    private TextArea categoryinfor1;
-    @FXML
-    void addcategory(ActionEvent event) {
-        try {
-            Stage ag0r= (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Parent root=FXMLLoader.load(getClass().getResource("/gui21/gui(2.1).fxml"));
-            Scene scene=new Scene(root);
-           ag0r.setScene(scene);
-           
-        } catch (Exception e) {
-       System.out.println(e.getMessage());
-    }
-    }
-    @FXML
-    void categoryinfor(KeyEvent event) {
-        if (event.getCode() == KeyCode.ENTER) {
-            String content =categoryinfor1.getText();
-            content += "\n"; // Thêm ký tự xuống dòng
-            categoryinfor1.setText(content);
-            categoryinfor1.positionCaret(content.length());
-        }
-    }
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        categoryinfor1.setWrapText(true);
-        name1.textProperty().addListener((Observable,oldvalue,newValue)->{
-            if(newValue.isEmpty()){
-                canhbao1.setVisible(true);
-            }
-            else{ canhbao1.setVisible(false);
-                }});
-                idnumber1.textProperty().addListener((Observable,oldvalue,newValue)->{
-                    if(newValue.isEmpty()){
-                        chamhoi2.setVisible(true);
-                    }
-                    else{ chamhoi2.setVisible(false);
-                        }});
-    }
+	@FXML
+	private TextField name1;
+	@FXML
+	private TextArea categoryinfor1;
+
+	@FXML
+	void addcategory(ActionEvent event) {
+		try {
+			Stage ag0r = (Stage) ((Node) event.getSource()).getScene().getWindow();
+			Parent root = FXMLLoader.load(getClass().getResource("/gui21/gui(2.1).fxml"));
+			Scene scene = new Scene(root);
+			ag0r.setScene(scene);
+
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	@FXML
+	void categoryinfor(KeyEvent event) {
+		if (event.getCode() == KeyCode.ENTER) {
+			String content = categoryinfor1.getText();
+			content += "\n"; // Thêm ký tự xuống dòng
+			categoryinfor1.setText(content);
+			categoryinfor1.positionCaret(content.length());
+		}
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		categoryinfor1.setWrapText(true);
+		name1.textProperty().addListener((Observable, oldvalue, newValue) -> {
+			if (newValue.isEmpty()) {
+				canhbao1.setVisible(true);
+			} else {
+				canhbao1.setVisible(false);
+			}
+		});
+		idnumber1.textProperty().addListener((Observable, oldvalue, newValue) -> {
+			if (newValue.isEmpty()) {
+				chamhoi2.setVisible(true);
+			} else {
+				chamhoi2.setVisible(false);
+			}
+		});
+	}
 
 }
