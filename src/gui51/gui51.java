@@ -14,11 +14,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 public class gui51 implements Initializable {
+    @FXML
+    private ImageView canhbao1;
+   
+    @FXML
+    private TextField textfile1;
     @FXML
     private ComboBox<String> closequiz2;
     @FXML
@@ -47,6 +54,62 @@ public class gui51 implements Initializable {
     private ComboBox<String> timelimit1;
     @FXML
     private ComboBox<String> whentim1;
+    @FXML
+    private CheckBox enable3;
+   
+    @FXML
+    void timeenable3(ActionEvent event) {
+        if(enable3.isSelected()){
+            textfile1.setDisable(false);
+            timelimit1.setDisable(false);
+           }
+           else{ textfile1.setDisable(true);
+             timelimit1.setDisable(true);}
+         }
+         @FXML
+         private CheckBox enable1;
+     
+         @FXML
+         private CheckBox enable2;
+         @FXML
+         void timeenable1(ActionEvent event) {
+            if(enable1.isSelected()){
+             openquiz1.setDisable(false);
+             openquiz2.setDisable(false);
+             openquiz3.setDisable(false);
+             openquiz4.setDisable(false);
+             openquiz5.setDisable(false);
+               }
+               else{    openquiz1.setDisable(true);
+                openquiz2.setDisable(true);
+                openquiz3.setDisable(true);
+                openquiz4.setDisable(true);
+                openquiz5.setDisable(true);
+
+            }
+             }
+         
+     
+         @FXML
+         void timeenable2(ActionEvent event) {
+            if(enable2.isSelected()){
+             closequiz1.setDisable(false);
+             closequiz2.setDisable(false);
+             closequiz3.setDisable(false);
+             closequiz4.setDisable(false);
+             closequiz5.setDisable(false);
+               }
+               else{ 
+                closequiz1.setDisable(true);
+                closequiz2.setDisable(true);
+                closequiz3.setDisable(true);
+                closequiz4.setDisable(true);
+                closequiz5.setDisable(true);
+               }
+             }
+         
+     
+
     @FXML
     void cancel(ActionEvent event) {
         try {
@@ -80,7 +143,15 @@ public class gui51 implements Initializable {
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(URL location, ResourceBundle resources) {   
+    namename.textProperty().addListener((Observable,oldvalue,newValue)->{
+        if(newValue.isEmpty()){
+            canhbao1.setVisible(true);
+        }
+        else{ canhbao1.setVisible(false);
+            }
+        });
+    
 ObservableList<Integer>list1=FXCollections.observableArrayList();
 for(int i =1;i<=31;i++){
 list1.addAll(i);

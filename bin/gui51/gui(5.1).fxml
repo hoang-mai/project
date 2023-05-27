@@ -37,7 +37,7 @@
          </image>
       </ImageView>
       <TextField fx:id="namename" layoutX="336.0" layoutY="159.0" prefHeight="25.0" prefWidth="364.0" />
-      <ImageView fitHeight="48.0" fitWidth="20.0" layoutX="316.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="canhbao1" fitHeight="48.0" fitWidth="20.0" layoutX="316.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../ImageView/dauchamthan.jpg" />
          </image>
@@ -58,20 +58,20 @@
       <Label layoutX="34.0" layoutY="550.0" text="Close the quiz" />
       <HBox layoutX="336.0" layoutY="509.0" prefHeight="31.0" prefWidth="391.0" spacing="10.0">
          <children>
-            <ComboBox fx:id="openquiz1" prefHeight="25.0" prefWidth="0.0" promptText="1" />
-            <ComboBox fx:id="openquiz2" prefHeight="26.0" prefWidth="97.0" promptText="January" />
-            <ComboBox fx:id="openquiz3" prefHeight="26.0" prefWidth="78.0" promptText="2023" />
-            <ComboBox fx:id="openquiz4" prefHeight="26.0" prefWidth="62.0" promptText="0" />
-            <ComboBox fx:id="openquiz5" prefHeight="26.0" prefWidth="58.0" promptText="0" />
+            <ComboBox fx:id="openquiz1" disable="true" prefHeight="25.0" prefWidth="0.0" promptText="1" />
+            <ComboBox fx:id="openquiz2" disable="true" prefHeight="26.0" prefWidth="97.0" promptText="January" />
+            <ComboBox fx:id="openquiz3" disable="true" prefHeight="26.0" prefWidth="78.0" promptText="2023" />
+            <ComboBox fx:id="openquiz4" disable="true" prefHeight="26.0" prefWidth="62.0" promptText="0" />
+            <ComboBox fx:id="openquiz5" disable="true" prefHeight="26.0" prefWidth="58.0" promptText="0" />
          </children>
       </HBox>
       <HBox layoutX="336.0" layoutY="543.0" prefHeight="31.0" prefWidth="391.0" spacing="10.0">
          <children>
-            <ComboBox fx:id="closequiz1" prefHeight="25.0" prefWidth="0.0" promptText="1" />
-            <ComboBox fx:id="closequiz2" prefHeight="26.0" prefWidth="97.0" promptText="January" />
-            <ComboBox fx:id="closequiz3" prefHeight="26.0" prefWidth="78.0" promptText="2023" />
-            <ComboBox fx:id="closequiz4" prefHeight="26.0" prefWidth="62.0" promptText="0" />
-            <ComboBox fx:id="closequiz5" prefHeight="26.0" prefWidth="58.0" promptText="0" />
+            <ComboBox fx:id="closequiz1" disable="true" prefHeight="25.0" prefWidth="0.0" promptText="1" />
+            <ComboBox fx:id="closequiz2" disable="true" prefHeight="26.0" prefWidth="97.0" promptText="January" />
+            <ComboBox fx:id="closequiz3" disable="true" prefHeight="26.0" prefWidth="78.0" promptText="2023" />
+            <ComboBox fx:id="closequiz4" disable="true" prefHeight="26.0" prefWidth="62.0" promptText="0" />
+            <ComboBox fx:id="closequiz5" disable="true" prefHeight="26.0" prefWidth="58.0" promptText="0" />
          </children>
       </HBox>
       <ImageView fitHeight="40.0" fitWidth="20.0" layoutX="316.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true">
@@ -79,21 +79,21 @@
             <Image url="@../ImageView/dauhoicham.jpg" />
          </image>
       </ImageView>
-      <CheckBox layoutX="740.0" layoutY="542.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="64.0" text="Enable">
+      <CheckBox fx:id="enable2" layoutX="740.0" layoutY="542.0" mnemonicParsing="false" onAction="#timeenable2" prefHeight="17.0" prefWidth="64.0" text="Enable">
          <font>
             <Font size="10.0" />
          </font>
       </CheckBox>
-      <CheckBox layoutX="740.0" layoutY="503.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="64.0" text="Enable">
+      <CheckBox fx:id="enable1" layoutX="740.0" layoutY="503.0" mnemonicParsing="false" onAction="#timeenable1" prefHeight="17.0" prefWidth="64.0" text="Enable">
          <font>
             <Font size="10.0" />
          </font>
       </CheckBox>
       <Label layoutX="34.0" layoutY="593.0" text="Time limit" />
       <Label layoutX="34.0" layoutY="628.0" text="When time expires" />
-      <TextField layoutX="336.0" layoutY="589.0" prefHeight="25.0" prefWidth="45.0" />
-      <ComboBox fx:id="timelimit1" layoutX="394.0" layoutY="589.0" prefHeight="25.0" prefWidth="87.0" promptText="minutes" />
-      <CheckBox layoutX="486.0" layoutY="593.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="64.0" text="Enable">
+      <TextField fx:id="textfile1" disable="true" layoutX="336.0" layoutY="589.0" prefHeight="25.0" prefWidth="45.0" promptText="0" />
+      <ComboBox fx:id="timelimit1" disable="true" layoutX="394.0" layoutY="589.0" prefHeight="25.0" prefWidth="87.0" promptText="minutes" />
+      <CheckBox fx:id="enable3" layoutX="486.0" layoutY="593.0" mnemonicParsing="false" onAction="#timeenable3" prefHeight="17.0" prefWidth="64.0" text="Enable">
          <font>
             <Font size="10.0" />
          </font>
