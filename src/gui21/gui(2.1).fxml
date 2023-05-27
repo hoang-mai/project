@@ -42,7 +42,7 @@
             </HBox>
             <CheckBox fx:id="alsoquestion1" layoutX="31.0" layoutY="162.0" mnemonicParsing="false" onAction="#alsoquestion" text="Also show questions from subcategories" />
             <CheckBox layoutX="32.0" layoutY="197.0" mnemonicParsing="false" text="Also show old questions" />
-            <ScrollPane fx:id="scrollpane1" hbarPolicy="NEVER" layoutX="32.0" layoutY="273.0" prefHeight="230.0" prefWidth="531.0">
+            <ScrollPane fx:id="scrollpane1" hbarPolicy="NEVER" layoutX="32.0" layoutY="288.0" prefHeight="123.0" prefWidth="531.0">
               <content>
                 <AnchorPane fx:id="anchorpane1" minHeight="0.0" minWidth="0.0" prefHeight="271.0" prefWidth="522.0">
                      <children>
